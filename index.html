@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Víctor Pérez | Portafolio DAM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ff87',
+                        'neon-dark': '#00cc6a',
+                        'bg-dark': '#060b08',
+                        'card-dark': '#0f1813',
+                        'border-dark': '#1c2d24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #060b08;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .text-neon {
+            color: #00ff87;
+        }
+
+        .bg-neon {
+            background-color: #00ff87;
+        }
+
+        .border-neon {
+            border-color: #00ff87;
+        }
+
+        .neon-glow {
+            box-shadow: 0 0 25px rgba(0, 255, 135, 0.2);
+        }
+
+        .neon-glow-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 135, 0.35);
+            border-color: rgba(0, 255, 135, 0.6);
+        }
+
+        .neon-text-glow {
+            text-shadow: 0 0 12px rgba(0, 255, 135, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060b08;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2d24;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff87;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-neon selection:text-black">
+
+    <nav class="fixed w-full z-50 top-0 bg-bg-dark/85 backdrop-blur-md border-b border-border-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#inicio" class="group flex items-center gap-2 text-2xl font-display font-bold text-white tracking-wider">
+                    <span class="text-neon group-hover:scale-110 transition-transform">&lt;/&gt;</span> VP<span class="text-neon font-mono">.</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8 font-mono text-sm">
+                    <a href="#inicio" class="text-slate-300 hover:text-neon transition-colors py-1"><span class="text-neon text-xs mr-1">01.</span>Inicio</a>
+                    <a href="#sobre-mi" class="text-slate-300 hover:text-neon transition-colors py-1"><span class="text-neon text-xs mr-1">02.</span>Sobre Mí</a>
+                    <a href="#aptitudes" class="text-slate-300 hover:text-neon transition-colors py-1"><span class="text-neon text-xs mr-1">03.</span>Aptitudes</a>
+                    <a href="#contacto" class="text-slate-300 hover:text-neon transition-colors py-1"><span class="text-neon text-xs mr-1">04.</span>Contacto</a>
+                </div>
+                <!-- Mobile Navigation Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-neon focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-card-dark border-b border-border-dark px-4 pt-2 pb-6 space-y-3 font-mono text-sm">
+            <a href="#inicio" class="block text-slate-300 hover:text-neon py-2"><span class="text-neon mr-2">01.</span>Inicio</a>
+            <a href="#sobre-mi" class="block text-slate-300 hover:text-neon py-2"><span class="text-neon mr-2">02.</span>Sobre Mí</a>
+            <a href="#aptitudes" class="block text-slate-300 hover:text-neon py-2"><span class="text-neon mr-2">03.</span>Aptitudes</a>
+            <a href="#contacto" class="block text-slate-300 hover:text-neon py-2"><span class="text-neon mr-2">04.</span>Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden">
+        <!-- Ambient background lighting -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-neon/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card-dark border border-border-dark text-neon text-xs font-mono mb-8 neon-glow">
+                <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                <span><i class="fas fa-location-dot mr-1"></i> Palomares del Río, Sevilla</span>
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl font-display font-bold text-white mb-4 tracking-tight">
+                Víctor Pérez
+            </h1>
+            
+            <p class="text-xl sm:text-3xl font-display text-slate-300 font-medium mb-6">
+                Estudiante de <span class="text-neon neon-text-glow">Desarrollo de Aplicaciones Multiplataforma</span>
+            </p>
+            
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Especializándome en la creación de software robusto, bases de datos eficientes y arquitectura de aplicaciones. Enfocado en código limpio, aprendizaje continuo y trabajo en equipo.
+            </p>
+
+            <!-- Action buttons -->
+            <div class="flex flex-wrap justify-center items-center gap-4 font-mono text-sm">
+                <a href="https://www.linkedin.com/in/victor-perez-martinez-8065923a7" target="_blank" rel="noopener noreferrer" 
+                   class="bg-neon text-bg-dark font-bold py-3.5 px-7 rounded-xl hover:bg-neon-dark transition-all transform hover:-translate-y-1 flex items-center gap-2 shadow-lg shadow-neon/20">
+                    <i class="fab fa-linkedin text-lg"></i> LinkedIn
+                </a>
+                
+                <a href="https://github.com/VictorPerezMartinez13" target="_blank" rel="noopener noreferrer" 
+                   class="bg-card-dark text-white border border-border-dark py-3.5 px-7 rounded-xl hover:border-neon hover:text-neon transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                    <i class="fab fa-github text-lg"></i> GitHub
+                </a>
+
+                <a href="mailto:vpm10918@gmail.com" 
+                   class="bg-card-dark text-white border border-border-dark py-3.5 px-7 rounded-xl hover:border-neon hover:text-neon transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                    <i class="fas fa-envelope text-lg"></i> Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="py-24 border-t border-border-dark/50 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex items-center gap-4 mb-16">
+                <span class="font-mono text-neon text-xl font-bold">02.</span>
+                <h2 class="text-3xl font-display font-bold text-white">Sobre Mí</h2>
+                <div class="h-[1px] bg-border-dark flex-grow ml-4"></div>
+            </div>
+
+            <!-- Content Grid without profile picture -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Ubicación y Formación -->
+                <div class="bg-card-dark border border-border-dark p-8 rounded-2xl neon-glow-hover transition-all space-y-6">
+                    <div class="flex items-center gap-3 text-neon font-mono text-sm font-semibold">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                        <span>FORMACIÓN ACADÉMICA</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="relative pl-6 border-l-2 border-neon/40 space-y-1">
+                            <span class="text-xs font-mono text-neon bg-neon/10 px-2.5 py-1 rounded">Actualidad</span>
+                            <h3 class="text-lg font-bold text-white">FP Grado Superior: Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                            <p class="text-slate-400 text-sm">Especialización en desarrollo multiplataforma, arquitectura de software y gestión de bases de datos.</p>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-border-dark space-y-1">
+                            <h3 class="text-lg font-bold text-white">FP Grado Medio: Sistemas Microinformáticos y Redes (SMR)</h3>
+                            <p class="text-slate-400 text-sm">Fundamentos de arquitectura de equipos, redes locales, sistemas operativos y seguridad informática.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lenguajes & Idiomas -->
+                <div class="space-y-8">
+                    <!-- Lenguajes de conocimiento -->
+                    <div class="bg-card-dark border border-border-dark p-8 rounded-2xl neon-glow-hover transition-all">
+                        <div class="flex items-center gap-3 text-neon font-mono text-sm font-semibold mb-6">
+                            <i class="fas fa-code text-xl"></i>
+                            <span>LENGUAJES & HERRAMIENTAS PRINCIPALES</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 bg-bg-dark border border-border-dark p-3.5 rounded-xl">
+                                <i class="fab fa-java text-neon text-2xl"></i>
+                                <span class="font-bold text-white">Java</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-bg-dark border border-border-dark p-3.5 rounded-xl">
+                                <i class="fab fa-html5 text-neon text-2xl"></i>
+                                <span class="font-bold text-white">HTML5</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-bg-dark border border-border-dark p-3.5 rounded-xl">
+                                <i class="fas fa-database text-neon text-2xl"></i>
+                                <span class="font-bold text-white">SQL</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-bg-dark border border-border-dark p-3.5 rounded-xl">
+                                <i class="fab fa-git-alt text-neon text-2xl"></i>
+                                <span class="font-bold text-white">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Idiomas y Ubicación -->
+                    <div class="bg-card-dark border border-border-dark p-8 rounded-2xl neon-glow-hover transition-all grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <div class="flex items-center gap-2 text-neon font-mono text-sm font-semibold mb-3">
+                                <i class="fas fa-language text-lg"></i>
+                                <span>IDIOMAS</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-neon text-xs"></i>
+                                    <span><strong>Español:</strong> Nativo</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-neon text-xs"></i>
+                                    <span><strong>Inglés:</strong> Nivel B1 (Cambridge)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center gap-2 text-neon font-mono text-sm font-semibold mb-3">
+                                <i class="fas fa-map-pin text-lg"></i>
+                                <span>UBICACIÓN</span>
+                            </div>
+                            <p class="text-sm text-slate-300 font-medium">Palomares del Río, Sevilla</p>
+                            <p class="text-xs text-slate-400 mt-1">Andalucía, España</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="aptitudes" class="py-24 border-t border-border-dark/50 bg-bg-dark/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex items-center gap-4 mb-16">
+                <span class="font-mono text-neon text-xl font-bold">03.</span>
+                <h2 class="text-3xl font-display font-bold text-white">Aptitudes & Competencias</h2>
+                <div class="h-[1px] bg-border-dark flex-grow ml-4"></div>
+            </div>
+
+            <!-- 3 Columns Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Category 1: Tecnologías -->
+                <div class="bg-card-dark border border-border-dark rounded-2xl p-8 flex flex-col justify-between neon-glow-hover transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-neon/10 border border-neon/30 flex items-center justify-center text-neon text-2xl mb-6">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Tecnologías</h3>
+                        <p class="text-slate-400 text-sm mb-6">
+                            Herramientas, lenguajes de programación y entornos de bases de datos empleados en el desarrollo de software.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">Java</span>
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">SQL</span>
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">PL/SQL</span>
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">Git</span>
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">DAM</span>
+                            <span class="bg-bg-dark border border-neon/40 text-neon font-mono text-xs px-3.5 py-2 rounded-lg hover:bg-neon hover:text-black font-semibold transition-colors">BD Relacionales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Habilidades -->
+                <div class="bg-card-dark border border-border-dark rounded-2xl p-8 flex flex-col justify-between neon-glow-hover transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-neon/10 border border-neon/30 flex items-center justify-center text-neon text-2xl mb-6">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Habilidades</h3>
+                        <p class="text-slate-400 text-sm mb-6">
+                            Habilidades blandas y metodologías de trabajo orientadas al cumplimiento de objetivos y colaboración eficaz.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Trabajo en equipo</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Proactividad</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Resiliencia</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Gestión proyectos</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Aprendizaje continuo</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Comunicación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Otros -->
+                <div class="bg-card-dark border border-border-dark rounded-2xl p-8 flex flex-col justify-between neon-glow-hover transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-neon/10 border border-neon/30 flex items-center justify-center text-neon text-2xl mb-6">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Otros</h3>
+                        <p class="text-slate-400 text-sm mb-6">
+                            Cualificaciones adicionales y capacitación constante para mantenerse actualizado.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Inglés Nivel B1</span>
+                            <span class="bg-bg-dark border border-border-dark text-slate-200 font-mono text-xs px-3.5 py-2 rounded-lg hover:border-neon hover:text-neon transition-colors">Formación continua</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 border-t border-border-dark/50 relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            
+            <span class="font-mono text-neon text-sm uppercase tracking-widest">04. ¿Hablamos?</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold text-white mt-2 mb-6">Ponte en Contacto</h2>
+            
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-12">
+                Actualmente estoy disponible para ofertas laborales, prácticas profesionales o proyectos colaborativos. ¡No dudes en escribirme!
+            </p>
+
+            <!-- Main Contact Info Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12 font-mono text-sm">
+                
+                <a href="mailto:vpm10918@gmail.com" class="bg-card-dark border border-border-dark p-5 rounded-2xl flex items-center gap-4 hover:border-neon hover:text-neon transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center text-neon text-xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text-left overflow-hidden">
+                        <span class="text-xs text-slate-500 block">EMAIL</span>
+                        <span class="text-slate-200 font-semibold group-hover:text-neon transition-colors truncate block">vpm10918@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/victor-perez-martinez-8065923a7" target="_blank" rel="noopener noreferrer" class="bg-card-dark border border-border-dark p-5 rounded-2xl flex items-center gap-4 hover:border-neon hover:text-neon transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center text-neon text-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="text-left overflow-hidden">
+                        <span class="text-xs text-slate-500 block">LINKEDIN</span>
+                        <span class="text-slate-200 font-semibold group-hover:text-neon transition-colors truncate block">Victor Perez Martinez</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/VictorPerezMartinez13" target="_blank" rel="noopener noreferrer" class="bg-card-dark border border-border-dark p-5 rounded-2xl flex items-center gap-4 hover:border-neon hover:text-neon transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center text-neon text-xl group-hover:scale-110 transition-transform">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="text-left overflow-hidden">
+                        <span class="text-xs text-slate-500 block">GITHUB</span>
+                        <span class="text-slate-200 font-semibold group-hover:text-neon transition-colors truncate block">VictorPerezMartinez13</span>
+                    </div>
+                </a>
+
+                <div class="bg-card-dark border border-border-dark p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-neon/10 flex items-center justify-center text-neon text-xl">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="text-left overflow-hidden">
+                        <span class="text-xs text-slate-500 block">UBICACIÓN</span>
+                        <span class="text-slate-200 font-semibold truncate block">Palomares del Río, Sevilla</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="mailto:vpm10918@gmail.com" class="inline-flex items-center gap-2 bg-neon text-bg-dark font-bold py-4 px-10 rounded-xl hover:bg-neon-dark transition-all transform hover:-translate-y-1 shadow-lg shadow-neon/20 font-mono text-sm">
+                <i class="fas fa-paper-plane"></i> Enviar Mensaje Directo
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-bg-dark border-t border-border-dark text-center font-mono text-xs text-slate-500">
+        <p>Víctor Pérez &copy; 2026 &mdash; Palomares del Río, Sevilla</p>
+        <p class="mt-1 text-slate-600">Desarrollo de Aplicaciones Multiplataforma</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
